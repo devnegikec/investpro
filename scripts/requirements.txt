@@ -1,5 +1,5 @@
-yfinance>=0.2.40
-nsepython>=2.97
-supabase>=2.3.0
+yfinance>=1.4.0
+supabase>=2.30.0
 httpx>=0.27.0
+python-dotenv>=1.0.0
 openai>=1.30.0
