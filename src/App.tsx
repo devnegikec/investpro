@@ -3,6 +3,7 @@ import { AuthProvider } from "@/contexts/AuthContext"
 import { QueryProvider } from "@/providers/QueryProvider"
 import { AppShell } from "@/components/layout/AppShell"
 import { ProtectedRoute } from "@/components/layout/ProtectedRoute"
+import { ErrorBoundary } from "@/components/layout/ErrorBoundary"
 import { Toaster } from "@/components/ui/sonner"
 import LoginPage from "@/pages/Login"
 import SignupPage from "@/pages/Signup"
@@ -13,6 +14,7 @@ import SettingsPage from "@/pages/Settings"
 
 export default function App() {
   return (
+    <ErrorBoundary>
     <BrowserRouter>
       <QueryProvider>
         <AuthProvider>
@@ -36,5 +38,6 @@ export default function App() {
         </AuthProvider>
       </QueryProvider>
     </BrowserRouter>
+    </ErrorBoundary>
   )
 }
